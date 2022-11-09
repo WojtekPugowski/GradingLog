@@ -1,10 +1,10 @@
 ﻿namespace GradingLogs
 {
-    internal class WriteStudent
+    public class StudentSaveInFile: StudentBase
     {
         private string? studentName;
 
-        public WriteStudent(string? studentName)
+        public StudentSaveInFile(string? studentName) : base
         {
             this.studentName = studentName;
         }

@@ -7,6 +7,8 @@
             Console.WriteLine("Input student name:");
             var studentName = Console.ReadLine();
 
+            var student = new StudentSaveInMemory(studentName);
+
 
         }
     }
