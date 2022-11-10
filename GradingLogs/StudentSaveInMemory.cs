@@ -9,7 +9,7 @@
 
         public override void AddGrade(double grade)
         {
-            grades.Add(grade);
+            this.grades.Add(grade);
                 if (GradeAdded != null)
                 {
                     GradeAdded(this, new EventArgs());

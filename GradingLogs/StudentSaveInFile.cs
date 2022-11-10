@@ -9,7 +9,7 @@
 
         public override void AddGrade(double grade)
         {
-                using (var writer = File.AppendText($"{Name}.txt"))
+                using (var writer = File.AppendText($"../../../{Name}.txt"))
                 {
                     writer.WriteLine(grade);
                     grades.Add(grade);
@@ -17,13 +17,14 @@
                     {
                         GradeAdded(this, new EventArgs());
                     }
-                }
+
+            }
         }
 
         public override Statistics GetStatistic()
         {
             var stats = new Statistics();
-            using (var reader = File.OpenText($"{Name}.txt"))
+            using (var reader = File.OpenText($"../../../{Name}.txt"))
             {
                 var line = reader.ReadLine();
                 while (line != null)
@@ -32,7 +33,6 @@
                     stats.Add(number);
                     line = reader.ReadLine();
                 }
-
             }
             return stats;
         }

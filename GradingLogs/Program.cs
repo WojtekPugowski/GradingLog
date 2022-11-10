@@ -1,29 +1,29 @@
 ﻿namespace GradingLogs
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-            IStudent student;
+            IStudent student = null;
+
 
             Console.WriteLine("Input student name:");
             var studentName = Console.ReadLine();
+
             Console.WriteLine("Choose letter 'F' to write to file or letter 'M' to save in memory");
             var choose = Console.ReadLine();
-            choose = choose.ToUpper();
-            var chooseLetter = char.Parse(choose);
+            var chooseLetter = choose.ToUpper();
 
             if (chooseLetter != null)
             {
                 switch (chooseLetter)
                 {
-                    case 'F':
+                    case "M":
                         student = new StudentSaveInMemory(studentName);
-                        EnterGrade(student);
+
                         break;
-                    case 'M':
+                    case "F":
                         student = new StudentSaveInFile(studentName);
-                        EnterGrade(student);
                         break;
                     default:
                         Console.WriteLine("Wrong choose");
@@ -31,16 +31,25 @@
 
                 }
             }
+            EnterGrade(student);
+            Statistics? stats = student.GetStatistic();
+            Console.WriteLine();
+            Console.WriteLine($"Statistics for student {student.Name}:");
+            Console.WriteLine($"High grade: {stats.High}");
+            Console.WriteLine($"Low grade: {stats.Low}");
+            Console.WriteLine($"Average: {stats.Average:N2}");
+            Console.WriteLine($"Letter grade: {stats.Letter}");
         }
 
         private static void EnterGrade(IStudent student)
         {
             while (true)
             {
-                Console.WriteLine($"Input grade for {student.Name}");
+                Console.WriteLine($"Input grade for {student.Name}. Choose letter 'Q' to see stats");
                 var input = Console.ReadLine();
+                input = input.ToUpper();
 
-                if (input == "q")
+                if (input == "Q")
                 {
                     break;
                 }
@@ -49,40 +58,40 @@
                 {
                     switch (input)
                     {
-                        case "1+":
-                            input = "1.5";
+                        case "1+" or "+1":
+                            input = "1,5";
                             break;
-                        case "2+":
-                            input = "2.5";
+                        case "2+" or"+2":
+                            input = "2,5";
                             break;
-                        case "3+":
-                            input = "3.5";
+                        case "3+" or "+3":
+                            input = "3,5";
                             break;
-                        case "4+":
-                            input = "4.5";
+                        case "4+" or "+4":
+                            input = "4,5";
                             break;
-                        case "5+":
-                            input = "5.5";
+                        case "5+" or "+5":
+                            input = "5,5";
                             break;
-                        case "2-":
-                            input = "1.75";
+                        case "2-" or "-2":
+                            input = "1,75";
                             break;
-                        case "3-":
-                            input = "2.75";
+                        case "3-" or "-3":
+                            input = "2,75";
                             break;
-                        case "4-":
-                            input = "3.75";
+                        case "4-" or "-4":
+                            input = "3,75";
                             break;
-                        case "5-":
-                            input = "4.75";
+                        case "5-" or "-5":
+                            input = "4,75";
                             break;
-                        case "6-":
-                            input = "5.75";
+                        case "6-" or "-6":
+                            input = "5,75";
                             break;
                     }
 
-                    var grade = double.Parse(input);
-                    if (grade > 0 && grade > 6)
+                    double grade = double.Parse(input);
+                    if (grade > 0D && grade <= 6D)
                     {
                         student.AddGrade(grade);
                     }
@@ -92,7 +101,7 @@
                     }
                 }
 
-                catch(FormatException ex) 
+                catch (FormatException ex) 
                 {
                     Console.WriteLine(ex.Message);
                 }
