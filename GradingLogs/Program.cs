@@ -4,13 +4,20 @@
     {
         static void Main(string[] args)
         {
-            IStudent student = null;
+            IStudent? student = null;
 
 
             Console.WriteLine("Input student name:");
             var studentName = Console.ReadLine();
+            if (studentName?.Length <=0)
+            {
+                Console.WriteLine("You have to input student's name");
+                return;
+            }
 
-            Console.WriteLine("Choose letter 'F' to write to file or letter 'M' to save in memory");
+            Console.WriteLine("Choose letter:");
+            Console.WriteLine("F - write to file");
+            Console.WriteLine("M - to save in memory");
             var choose = Console.ReadLine();
             var chooseLetter = choose.ToUpper();
 

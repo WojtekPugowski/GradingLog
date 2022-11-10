@@ -11,11 +11,9 @@
 
         public override void AddGrade(double grade)
         {
-            this.grades.Add(grade);
-                if (GradeAdded != null)
-                {
-                    GradeAdded(this, new EventArgs());
-                }
+            grades.Add(grade);
+            if (GradeAdded != null) GradeAdded(this, new EventArgs());
+
         }
 
         public override Statistics GetStatistic()

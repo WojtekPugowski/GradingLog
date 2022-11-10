@@ -1,6 +1,6 @@
 ﻿namespace GradingLogs
 {
-    public class StudentSaveInFile: StudentBase
+    public class StudentSaveInFile : StudentBase
     {
         private List<double> grades;
         public StudentSaveInFile(string? name) : base(name) => grades = new List<double>();
@@ -9,15 +9,11 @@
 
         public override void AddGrade(double grade)
         {
-                using (var writer = File.AppendText($"../../../{Name}.txt"))
-                {
-                    writer.WriteLine(grade);
-                    grades.Add(grade);
-                    if (GradeAdded != null)
-                    {
-                        GradeAdded(this, new EventArgs());
-                    }
-
+            using (var writer = File.AppendText($"../../../{Name}.txt"))
+            {
+                writer.WriteLine(grade);
+                grades.Add(grade);
+                if (GradeAdded != null) GradeAdded(this, new EventArgs());
             }
         }
 
