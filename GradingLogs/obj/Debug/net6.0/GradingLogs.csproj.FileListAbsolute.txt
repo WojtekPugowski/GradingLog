@@ -1,0 +1,15 @@
+C:\Users\TEST\Source\Repos\GradingLog\GradingLogs\bin\Debug\net6.0\GradingLogs.exe
+C:\Users\TEST\Source\Repos\GradingLog\GradingLogs\bin\Debug\net6.0\GradingLogs.deps.json
+C:\Users\TEST\Source\Repos\GradingLog\GradingLogs\bin\Debug\net6.0\GradingLogs.runtimeconfig.json
+C:\Users\TEST\Source\Repos\GradingLog\GradingLogs\bin\Debug\net6.0\GradingLogs.dll
+C:\Users\TEST\Source\Repos\GradingLog\GradingLogs\bin\Debug\net6.0\GradingLogs.pdb
+C:\Users\TEST\Source\Repos\GradingLog\GradingLogs\obj\Debug\net6.0\GradingLogs.csproj.AssemblyReference.cache
+C:\Users\TEST\Source\Repos\GradingLog\GradingLogs\obj\Debug\net6.0\GradingLogs.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\TEST\Source\Repos\GradingLog\GradingLogs\obj\Debug\net6.0\GradingLogs.AssemblyInfoInputs.cache
+C:\Users\TEST\Source\Repos\GradingLog\GradingLogs\obj\Debug\net6.0\GradingLogs.AssemblyInfo.cs
+C:\Users\TEST\Source\Repos\GradingLog\GradingLogs\obj\Debug\net6.0\GradingLogs.csproj.CoreCompileInputs.cache
+C:\Users\TEST\Source\Repos\GradingLog\GradingLogs\obj\Debug\net6.0\GradingLogs.dll
+C:\Users\TEST\Source\Repos\GradingLog\GradingLogs\obj\Debug\net6.0\refint\GradingLogs.dll
+C:\Users\TEST\Source\Repos\GradingLog\GradingLogs\obj\Debug\net6.0\GradingLogs.pdb
+C:\Users\TEST\Source\Repos\GradingLog\GradingLogs\obj\Debug\net6.0\GradingLogs.genruntimeconfig.cache
+C:\Users\TEST\Source\Repos\GradingLog\GradingLogs\obj\Debug\net6.0\ref\GradingLogs.dll

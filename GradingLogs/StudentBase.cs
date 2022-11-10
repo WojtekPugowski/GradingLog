@@ -7,8 +7,14 @@ using System.Threading.Tasks;
 namespace GradingLogs
 {
     public delegate void GradeAddedDelegate(object sender, EventArgs args);
-    public class StudentBase : NameObject, IStudent
+    public abstract class StudentBase : NameObject, IStudent
     {
+        public StudentBase(string name) : base(name) { }
 
+        public abstract event GradeAddedDelegate GradeAdded;
+
+        public abstract void AddGrade(double grade);
+
+        public abstract Statistics GetStatistic();
     }
 }
