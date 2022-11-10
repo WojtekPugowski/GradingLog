@@ -45,7 +45,7 @@
         {
             while (true)
             {
-                Console.WriteLine($"Input grade for {student.Name}. Choose letter 'Q' to see stats");
+                Console.WriteLine($"Input grade for {student.Name} or choose letter 'Q' to see stats.");
                 var input = Console.ReadLine();
                 input = input.ToUpper();
 
@@ -97,7 +97,7 @@
                     }
                     else 
                     {
-                        throw new ArgumentException("Input number is too small or too large");
+                        throw new ArgumentException("Input number is too small or too large. Choose number from 1 to 6.");
                     }
                 }
 

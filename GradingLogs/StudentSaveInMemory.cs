@@ -3,6 +3,8 @@
     public class StudentSaveInMemory : StudentBase, IStudent
     {
         private List<double> grades;
+
+
         public StudentSaveInMemory(string? name) : base(name) => grades = new List<double>();
 
         public override event GradeAddedDelegate GradeAdded;
