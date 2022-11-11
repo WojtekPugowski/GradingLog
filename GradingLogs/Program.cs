@@ -66,34 +66,34 @@
                     switch (input)
                     {
                         case "1+" or "+1":
-                            input = "1,5";
+                            input = "1.5";
                             break;
                         case "2+" or"+2":
-                            input = "2,5";
+                            input = "2.5";
                             break;
                         case "3+" or "+3":
-                            input = "3,5";
+                            input = "3.5";
                             break;
                         case "4+" or "+4":
-                            input = "4,5";
+                            input = "4.5";
                             break;
                         case "5+" or "+5":
-                            input = "5,5";
+                            input = "5.5";
                             break;
                         case "2-" or "-2":
-                            input = "1,75";
+                            input = "1.75";
                             break;
                         case "3-" or "-3":
-                            input = "2,75";
+                            input = "2.75";
                             break;
                         case "4-" or "-4":
-                            input = "3,75";
+                            input = "3.75";
                             break;
                         case "5-" or "-5":
-                            input = "4,75";
+                            input = "4.75";
                             break;
                         case "6-" or "-6":
-                            input = "5,75";
+                            input = "5.75";
                             break;
                     }
 
