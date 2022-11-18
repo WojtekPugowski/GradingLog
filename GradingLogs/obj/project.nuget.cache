@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "TtGLw0OOHEmn0VZuVAwyMycjAOxYU3rbmRHYkah3ddPbL9LmJBOILw8c+Uccc/MQxC3px9Q34HuaFZHtqCSmtw==",
+  "dgSpecHash": "TzALLo/2OOZvOHv3a9uX0OwJ8T2AZSzVpaYJz9q5vKntjUpHvjUc7vEov0jgx0xEZhABSmqZbltCul62jdfnpA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\TEST\\Source\\Repos\\GradingLog\\GradingLogs\\GradingLogs.csproj",
+  "projectFilePath": "/Users/wojtekpugowski/dev/cSharp/gotoit/GradingLog/GradingLogs/GradingLogs.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

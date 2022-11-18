@@ -6,7 +6,6 @@
         public double Low;
         public double Sum;
         public int Count;
-
         public Statistics()
         {
             High = double.MinValue;
@@ -14,7 +13,6 @@
             Sum = 0D;
             Count = 0;
         }
-
         public double Average
         {
             get
@@ -22,30 +20,27 @@
                 return Sum / Count;
             }
         }
-
         public char Letter
         {
             get
             {
-
                 switch (Average)
                 {
-                    case var d when d >= 5:
+                    case >= 5:
                         return 'A';
-                    case var d when d >= 4:
+                    case >= 4:
                         return 'B';
-                    case var d when d >= 3:
+                    case >= 3:
                         return 'C';
-                    case var d when d >= 2:
+                    case >= 2:
                         return 'D';
-                    case var d when d > 1:
+                    case > 1:
                         return 'E';
                     default:
                         return 'F';
                 }
             }
         }
-
         public void Add(double number)
         {
             Sum += number;

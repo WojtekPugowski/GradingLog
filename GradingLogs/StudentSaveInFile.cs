@@ -3,24 +3,26 @@
     public class StudentSaveInFile : StudentBase
     {
         private List<double> grades;
-        public StudentSaveInFile(string? name) : base(name) => grades = new List<double>();
-
+        public string pathToFile;
+        public StudentSaveInFile(string? name) : base(name)
+        {
+            grades = new List<double>();
+            pathToFile = $"../../../{Name}.txt";
+        }
         public override event GradeAddedDelegate GradeAdded;
-
         public override void AddGrade(double grade)
         {
-            using (var writer = File.AppendText($"../../../{Name}.txt"))
+            using (var writer = File.AppendText(pathToFile))
             {
                 writer.WriteLine(grade);
                 grades.Add(grade);
                 if (GradeAdded != null) GradeAdded(this, new EventArgs());
             }
         }
-
         public override Statistics GetStatistic()
         {
             var stats = new Statistics();
-            using (var reader = File.OpenText($"../../../{Name}.txt"))
+            using (var reader = File.OpenText(pathToFile))
             {
                 var line = reader.ReadLine();
                 while (line != null)
